@@ -3,9 +3,9 @@
     <label>
       {{ label }}
       <br />
-      <button @click="incrementItem">+</button>
+      <button type="button" @click="incrementItem">+</button>
       <p>{{ counter }}</p>
-      <button @click="decrementItem">-</button>
+      <button type="button" @click="decrementItem">-</button>
     </label>
   </div>
 </template>
