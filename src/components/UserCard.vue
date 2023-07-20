@@ -2,7 +2,7 @@
   <div>
     <h1></h1>
     <div>
-      <!--      <img src="../assets/images/logo.png" width="300px" />-->
+      <img src="../assets/images/img.png" width="300px" alt="Code" />
       <div>
         <h2>
           {{ getAuthorFullName }}

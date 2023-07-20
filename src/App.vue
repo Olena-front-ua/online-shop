@@ -8,6 +8,8 @@
     <span>___________________________________________-</span>
     <SearchByName />
     <span>___________________________________________-</span>
+    <Filters />
+    <span>___________________________________________-</span>
   </div>
 </template>
 
@@ -16,10 +18,12 @@ import EmailPassword from "./components/EmailPassword.vue";
 import IncrementDecrement from "./components/IncrementDecrement.vue";
 import UserCard from "@/components/UserCard.vue";
 import SearchByName from "@/components/SearchByName.vue";
+import Filters from "@/components/Filters.vue";
 
 export default {
   name: "App",
   components: {
+    Filters,
     SearchByName,
     UserCard,
     EmailPassword,
