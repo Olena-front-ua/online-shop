@@ -32,10 +32,10 @@
       </button>
       <button
         type="button"
-        :class="imgFilters.reduce ? 'active' : ''"
-        @click="imgFilters.reduce = !imgFilters.reduce"
+        :class="imgFilters.shadow ? 'active' : ''"
+        @click="imgFilters.shadow = !imgFilters.shadow"
       >
-        Reduce
+        Shadow
       </button>
     </div>
 
@@ -86,6 +86,7 @@ export default {
         sepia: false,
         frame: false,
         reduce: false,
+        shadow: false,
       },
       imgSizes: {
         maxWidth: 600,
@@ -123,8 +124,9 @@ img {
   &.frame {
     border: 5px dashed #464646;
   }
-  &.reduce {
-    width: 400px;
+  &.shadow {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
   }
 }
 button {

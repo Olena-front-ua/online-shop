@@ -31,7 +31,7 @@
       {{ page }}
     </button>
     <button type="button" @click="currentPage++">Next</button>
-    <p>Pade {{ currentPage }} of {{ pages }}</p>
+    <p>Page {{ currentPage }} of {{ pages }}</p>
   </div>
 </template>
 <script>

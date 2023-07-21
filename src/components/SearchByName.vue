@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" @input="searchText = $event.target.value" />
+    <MyInput v-model="searchText" />
     <p>All names: {{ names.length }}, matches: {{ getFilteredNames.length }}</p>
     <ul>
       <li v-for="(name, index) in getFilteredNames" :key="index">
@@ -11,8 +11,11 @@
 </template>
 
 <script>
+import MyInput from "@/components/Search/MyInput.vue";
+
 export default {
   name: "searchByName",
+  components: { MyInput },
   data() {
     return {
       searchText: " ",
