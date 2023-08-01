@@ -99,6 +99,24 @@
         Повідоляти мене про нові курси
       </label>
     </div>
+    <div class="form-group form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="rules"
+        :class="$v.form.rules.$error ? 'is-invalid' : ''"
+        v-model.trim="form.rules"
+      />
+      <label class="form-check-label" for="notification">
+        Ознайомлена з правилами
+      </label>
+      <p
+        v-if="$v.form.login.$dirty && !$v.form.password.required"
+        class="invalid-feedback"
+      >
+        Обов'язкове поле
+      </p>
+    </div>
     <div class="flex">
       <div class="form-check">
         <input
@@ -142,6 +160,7 @@ export default {
         country: "Russia",
         favoriteThemes: ["IT"],
         agreeWithSendEmail: false,
+        rules: false,
         gender: "male",
       },
       countries: [
@@ -179,6 +198,7 @@ export default {
       login: { required, minLength: minLength(5) },
       email: { required, email },
       password: { required },
+      rules: { required },
     },
   },
   methods: {
