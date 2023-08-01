@@ -14,6 +14,8 @@
     <span>___________________________________________-</span>
     <ReactivityForm />
     <span>___________________________________________-</span>
+    <FormsVuelidate />
+    <span>___________________________________________-</span>
   </div>
 </template>
 
@@ -25,11 +27,13 @@ import SearchByName from "@/components/SearchByName.vue";
 import Filters from "@/components/Filters.vue";
 import ProductList from "@/components/Product/ProductList.vue";
 import ReactivityForm from "@/components/Reactivity.vue";
+import FormsVuelidate from "@/components/FormsVuelidate.vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "home",
   components: {
+    FormsVuelidate,
     ReactivityForm,
     ProductList,
     Filters,
