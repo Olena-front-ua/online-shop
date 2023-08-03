@@ -1,5 +1,5 @@
 <template>
-  <div class="modal fade show">
+  <div class="modal fade show" ref="modalWindow">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -15,7 +15,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" @scroll="onBodyScroll" ref="modalBody">
+        <div class="modal-body" @scroll="onScroll">
           <slot name="information"></slot>
         </div>
         <div class="modal-footer">
@@ -51,22 +51,32 @@ export default {
       isRulesRead: false,
     };
   },
-  beforeCreate() {
-    console.log("beforeCreate");
+  // beforeCreate() {
+  //   console.log("beforeCreate");
+  // },
+  mounted() {
+    const modalBody = this.$refs.modalWindow.querySelector(".modal-body");
+    modalBody.scrollTop = modalBody.scrollHeight - modalBody.clientHeight;
   },
   methods: {
     closeModal() {
       this.$emit("close");
     },
-    onBodyScroll() {
-      const modalBody = this.$refs.modalBody;
-      if (
-        modalBody.clientHeight + modalBody.scrollTop >=
-        modalBody.scrollHeight
-      ) {
-        this.isRulesRead = true;
-      }
+    onScrollEnd() {
+      this.isRulesRead = true;
     },
+    // onBodyScroll() {
+    //   const modalBody = this.$refs.modalBody;
+    //   if (
+    //     modalBody.clientHeight + modalBody.scrollTop >=
+    //     modalBody.scrollHeight
+    //   ) {
+    //     this.isRulesRead = true;
+    //   }
+    // },
+  },
+  created() {
+    this.$log();
   },
 };
 </script>

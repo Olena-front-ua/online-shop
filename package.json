@@ -14,6 +14,7 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "install": "^0.13.0",
+    "marked": "^6.0.0",
     "npm": "^9.8.1",
     "vue": "^2.7.14",
     "vuelidate": "^0.7.7"
