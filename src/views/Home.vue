@@ -16,6 +16,8 @@
     <span>___________________________________________-</span>
     <FormsVuelidate />
     <span>___________________________________________-</span>
+    <UserPage />
+    <span>___________________________________________-</span>
   </div>
 </template>
 
@@ -28,11 +30,13 @@ import Filters from "@/components/Filters.vue";
 import ProductList from "@/components/Product/ProductList.vue";
 import ReactivityForm from "@/components/Reactivity.vue";
 import FormsVuelidate from "@/components/FormsVuelidate.vue";
+import UserPage from "@/components/Modal/UserPage.vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "home",
   components: {
+    UserPage,
     FormsVuelidate,
     ReactivityForm,
     ProductList,
