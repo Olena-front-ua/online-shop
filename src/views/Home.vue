@@ -18,6 +18,8 @@
     <span>___________________________________________-</span>
     <UserPage />
     <span>___________________________________________-</span>
+    <TextEditor />
+    <span>___________________________________________-</span>
   </div>
 </template>
 
@@ -31,11 +33,13 @@ import ProductList from "@/components/Product/ProductList.vue";
 import ReactivityForm from "@/components/Reactivity.vue";
 import FormsVuelidate from "@/components/FormsVuelidate.vue";
 import UserPage from "@/components/Modal/UserPage.vue";
+import TextEditor from "@/components/TextEditor.vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "home",
   components: {
+    TextEditor,
     UserPage,
     FormsVuelidate,
     ReactivityForm,
